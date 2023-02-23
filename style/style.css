@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&display=swap');
+
+:root{ /* Atribuição de valor*/
+    --cor-primaria: #000000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22d4fd;
+    --cor-hover:#272727;
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat','sans-serif'
+
+}
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    /*height: 100vh;  Usar toda a tela "100"*/
+    box-sizing:border-box ; /*Não sair "filho não sair do pai */
+    background-color:var(--cor-primaria); /*fundo */
+    color: var(--cor-secundaria); 
+}
+.cabecalho{
+    padding: 2% 0% 0% 15%; /*  1 valor e superior, 2 valor do lado direito, 3 valor do inferior, 3 valor do lado esquerdo*/
+}
+.cabecalho_menu{
+    display: flex;
+    gap:80px ;
+}
+.cabecalho_menu_link{
+    font-family:var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration:none ;
+}
+
+.apresentacao{
+    padding: 5% 15% ;
+    display:flex ;/* deixa alinhado/ organiza elemntos da pagina*/
+    align-items: center;/* alinha no centro*/
+    justify-content: space-between;
+    gap: 82px;
+
+}
+.apresentacao_conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+.apresentacao_conteudo_titulo{
+
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+.destaque{
+    color: var(--cor-terciaria);
+}
+.apresentacao_conteudo_texto{
+
+    font-size: 1.5rem;
+    font-family: var(--cor-secundaria);
+}
+.apresentacao_links{
+
+    display: flex; /* coloca os quadrados lado a lado */
+    flex-direction: column; /*esse bloco de informação em coluna */
+    justify-content: space-between;
+    align-items: center; /*alinhar esse bloco*/
+    gap: 32px; /* adiciona espaços iguais entre cada quadrado */
+}
+.apresentacao_links_subtitulo{
+    font-family: var(--fonte-primaria) ;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.apresentacao_links_navegacao{
+
+   /* background-color: #22D4FD;*/
+   display: flex;
+   justify-content: center;
+   gap: 16px;
+    border: 2px solid var(--cor-terciaria); /* detalhe do botão a borda*/
+    width: 50%;
+    text-align: center;
+    border-radius: 8px; /* borda do botao*/ 
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+
+
+    
+}
+.apresentacao_links_links:hover{  /* usado para selecionar elementos quando você passa o mouse sobre eles*/ 
+
+    background-color: var(--cor-hover);
+}
+.apresentacao_imagem{
+    width: 50%;
+}
+.rodape{
+    padding: 24px; /* O Padding é responsável por definir a distância entre um conteúdo e suas bordas.*/
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria) ;
+    font: size 1.5rem; 
+    font-weight: 400;
+
+}
+/*Se a tela diminuir mais do que 1200px sera usado esse media para melhor adptação*/
+@media (max-width:1200px){
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+
+    }
+    .cabecalho{
+        padding: 10%;
+    }
+    .cabecalho_menu{
+        justify-content: center;
+    }
+    .apresentacao_conteudo{
+        width: auto;
+    }
+
+}
